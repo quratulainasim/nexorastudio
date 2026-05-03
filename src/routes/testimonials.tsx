@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Marquee } from "@/components/site/Marquee";
-import { customers, happyCustomers } from "@/components/site/data";
+import { customers } from "@/components/site/data";
 import { Quote, Star } from "lucide-react";
 
 export const Route = createFileRoute("/testimonials")({
@@ -30,7 +30,7 @@ function TestimonialsPage() {
           Loved by founders & <span className="text-gradient">teams worldwide</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-          Two of our recent partners share how Nexora helped them ship and scale.
+          Four of our recent partners share how Nexora helped them ship and scale.
         </p>
       </section>
 
@@ -74,45 +74,7 @@ function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Happy customer marquees — humans */}
-      <section className="py-12">
-        <h3 className="mb-8 text-center font-display text-2xl font-semibold text-muted-foreground">
-          Happy faces, happy teams
-        </h3>
-        <div className="space-y-4">
-          <Marquee speed={45}>
-            {happyCustomers.map((c) => (
-              <PersonCard key={c.name} {...c} />
-            ))}
-          </Marquee>
-          <Marquee reverse speed={55}>
-            {[...happyCustomers].reverse().map((c) => (
-              <PersonCard key={c.name + "r"} {...c} />
-            ))}
-          </Marquee>
-        </div>
-      </section>
-
       <Footer />
-    </div>
-  );
-}
-
-function PersonCard({ name, role, image }: { name: string; role: string; image: string }) {
-  return (
-    <div className="flex h-24 w-80 shrink-0 items-center gap-4 rounded-2xl border border-border bg-card/60 px-5 backdrop-blur transition hover:border-primary">
-      <img
-        src={image}
-        alt={name}
-        width={56}
-        height={56}
-        loading="lazy"
-        className="h-14 w-14 rounded-full border-2 border-primary/40 object-cover"
-      />
-      <div className="min-w-0">
-        <div className="truncate font-display text-base font-semibold">{name}</div>
-        <div className="truncate text-xs text-muted-foreground">{role}</div>
-      </div>
     </div>
   );
 }

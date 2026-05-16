@@ -41,39 +41,50 @@ function HomePage() {
             <HangingSign text="Open for Projects" />
           </div>
 
-          <div className="mx-auto mt-16 max-w-4xl font-display text-5xl font-bold leading-tight md:text-7xl">
-            <Typewriter text="Crafting digital experiences" speed={70} className="text-gradient" />
+          <div className="mx-auto mt-16 max-w-5xl font-display text-5xl font-bold leading-tight md:text-7xl">
+            <Typewriter text="Your Business Deserves" speed={70} className="text-gradient" />
             <br />
-            <span className="animate-fade-up" style={{ animationDelay: "2.5s", animationFillMode: "both" }}>
-              that scale your business.
+            <span className="animate-fade-up" style={{ animationDelay: "2.2s", animationFillMode: "both" }}>
+              an AI-Powered Team.
             </span>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground animate-fade-up">
-            UX/UI design, full-stack websites, AI chatbots and intelligent automation —
-            all under one roof.
+            We build full-stack products, deploy{" "}
+            <span className="text-primary font-semibold">FTE AI employees</span> that work 24/7, and automate your entire workflow —
+            so you scale faster without scaling costs.
           </p>
+
+          {/* FTE AI pill badges */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            {["FTE AI Agents", "Full-Stack Dev", "Cloud & DevOps", "AI Automation"].map((badge) => (
+              <span key={badge} className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur">
+                {badge}
+              </span>
+            ))}
+          </div>
+
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 font-medium text-primary-foreground shadow-glow transition hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 font-semibold text-primary-foreground shadow-glow transition hover:opacity-90 hover:scale-105"
             >
-              Start your project
+              Hire Your AI Team Now
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </Link>
             <Link
               to="/projects"
-              className="rounded-full border border-border bg-card/40 px-6 py-3 font-medium backdrop-blur transition hover:border-primary"
+              className="rounded-full border border-border bg-card/40 px-6 py-3.5 font-medium backdrop-blur transition hover:border-primary"
             >
-              View our work
+              See What We've Built
             </Link>
           </div>
 
           {/* stat strip */}
           <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-6 glass rounded-2xl p-6">
             {[
-              { v: "50+", l: "Projects shipped" },
-              { v: "98%", l: "Client satisfaction" },
-              { v: "24/7", l: "AI agents live" },
+              { v: "50+", l: "Products Delivered" },
+              { v: "10x", l: "Faster with FTE AI" },
+              { v: "24/7", l: "AI Agents Working" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-3xl font-bold text-gradient">{s.v}</div>
@@ -87,7 +98,7 @@ function HomePage() {
       {/* SERVICES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <SectionHeading eyebrow="What we do" title="Services that drive growth" />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, description, points }) => (
             <div
               key={title}

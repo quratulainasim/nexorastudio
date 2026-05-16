@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { NeonHexLogo } from "./NeonHexLogo";
 
 export function Footer() {
@@ -24,11 +24,10 @@ export function Footer() {
         </div>
         <div className="flex items-start gap-3 md:justify-end">
           {[
-            { Icon: Twitter, href: "https://twitter.com" },
-            { Icon: Instagram, href: "https://instagram.com" },
-            { Icon: Linkedin, href: "https://linkedin.com" },
+            { Icon: Twitter, href: "https://x.com/asim_qurat" },
+            { Icon: Instagram, href: "https://www.instagram.com/quratulainasim1234/" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/quratulain-asim/" },
             { Icon: Github, href: "https://github.com" },
-            { Icon: Youtube, href: "https://youtube.com" },
           ].map(({ Icon, href }, i) => (
             <a
               key={i}

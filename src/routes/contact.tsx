@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import {
-  Github, Instagram, Linkedin, Twitter, Youtube, Mail, MapPin, Phone, Send,
+  Github, Instagram, Linkedin, Twitter, Mail, MapPin, Phone, Send,
 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
@@ -19,11 +19,10 @@ export const Route = createFileRoute("/contact")({
 });
 
 const socials = [
-  { Icon: Twitter, label: "Twitter / X", handle: "@nexorastudio", href: "https://twitter.com" },
-  { Icon: Instagram, label: "Instagram", handle: "@nexora.studio", href: "https://instagram.com" },
-  { Icon: Linkedin, label: "LinkedIn", handle: "Nexora Studio", href: "https://linkedin.com" },
+  { Icon: Twitter, label: "Twitter / X", handle: "@asim_qurat", href: "https://x.com/asim_qurat" },
+  { Icon: Instagram, label: "Instagram", handle: "@quratulainasim1234", href: "https://www.instagram.com/quratulainasim1234/" },
+  { Icon: Linkedin, label: "LinkedIn", handle: "Quratulain Asim", href: "https://www.linkedin.com/in/quratulain-asim/" },
   { Icon: Github, label: "GitHub", handle: "nexora-studio", href: "https://github.com" },
-  { Icon: Youtube, label: "YouTube", handle: "Nexora Studio", href: "https://youtube.com" },
 ];
 
 function ContactPage() {

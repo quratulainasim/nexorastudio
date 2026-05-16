@@ -10,7 +10,7 @@ import hackTodoImg from "@/assets/projects/hack2-todo.png";
 import hack5Img from "@/assets/projects/hack5.png";
 import p1 from "@/assets/Sara Ahmed.webp";
 import p2 from "@/assets/p2.jpg";
-import { Bot, Code2, Palette, Workflow } from "lucide-react";
+import { Bot, Cloud, Code2, Palette, ScanSearch, Workflow } from "lucide-react";
 
 export const services = [
   {
@@ -40,6 +40,20 @@ export const services = [
     description:
       "Integrate AI into your systems and automate repetitive business processes for maximum efficiency.",
     points: ["Process automation", "Data processing", "System integration"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Computing",
+    description:
+      "Scalable cloud infrastructure and DevOps solutions using Docker and Kubernetes to deploy, manage and scale your applications with ease.",
+    points: ["Docker Containerization", "Kubernetes Orchestration", "CI/CD Pipelines"],
+  },
+  {
+    icon: ScanSearch,
+    title: "OpenClaw — Autonomous AI Agents",
+    description:
+      "Deploy OpenClaw-powered AI agents that run 24/7 on your system — executing tasks, managing workflows, browsing the web, and integrating with WhatsApp, Telegram & Slack using Claude or GPT under the hood.",
+    points: ["Local-first autonomous agents", "Messaging app integration", "LLM-powered task execution"],
   },
 ] as const;
 

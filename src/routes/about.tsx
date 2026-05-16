@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import mypic from "@/assets/mypic.jpg";
+import pib from "@/assets/pib.jpg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -23,41 +23,57 @@ function AboutPage() {
           About Us
         </span>
         <h1 className="mt-4 font-display text-5xl font-bold md:text-6xl animate-font-movement">
-          Meet the <span className="text-gradient">Founder</span>
+          About <span className="text-gradient">Nexora Studio</span>
         </h1>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-24">
-        <div className="overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-card md:p-12">
-          <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-16">
+        {/* Landscape Image - Modern & Clean Presentation */}
+        <div className="relative w-full aspect-[21/9] md:aspect-[16/7] overflow-hidden rounded-3xl border border-border shadow-2xl mb-12 group">
+          <img 
+            src={pib} 
+            alt="Nexora Studio — Software House" 
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          {/* Subtle overlay for better blending */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-brand opacity-10 mix-blend-overlay" />
+        </div>
+
+        {/* Text Description Container */}
+        <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-card">
+          <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
             
-            {/* Image Container with Neon Glow */}
-            <div className="group relative shrink-0">
-              <div className="absolute -inset-4 rounded-full bg-gradient-brand opacity-20 blur-xl transition group-hover:opacity-40" />
-              <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20 shadow-neon transition-transform duration-500 group-hover:scale-105">
-                <img 
-                  src={mypic} 
-                  alt="Quratulain" 
-                  className="h-full w-full object-cover"
-                />
+            {/* Title Section (Left on Desktop) */}
+            <div className="md:w-1/3 shrink-0">
+              <h2 className="font-display text-4xl font-bold text-foreground">
+                Nexora Studio
+              </h2>
+              <h3 className="mt-2 text-lg font-medium text-primary">
+                Software House & AI Solutions
+              </h3>
+              
+              {/* Highlights Moved under title for better layout balance */}
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["AI & Automation", "Cloud & DevOps", "Full-Stack Dev", "UX / UI Design"].map((badge) => (
+                  <span key={badge} className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+                    {badge}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Text Content */}
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="font-display text-4xl font-bold text-foreground">
-                Quratulain
-              </h2>
-              <h3 className="mt-2 text-lg font-medium text-primary">
-                Founder & CEO
-              </h3>
-              
-              <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
+            {/* Description Section (Right on Desktop) */}
+            <div className="md:w-2/3">
+              <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  Passionate about building innovative software and AI solutions that help businesses grow in the digital era.
+                  Nexora Studio is a next-generation software house specializing in cutting-edge web development, artificial intelligence, and cloud-powered solutions. We help startups and enterprises build, scale, and automate their digital products.
                 </p>
                 <p>
-                  At Nexora Studio, we believe that technology should be an enabler, not a bottleneck. My mission is to bridge the gap between complex AI systems and practical business applications, ensuring our clients stay ahead of the curve.
+                  From bespoke full-stack applications and intelligent AI agents to Docker & Kubernetes-powered cloud infrastructure, our expert team delivers end-to-end solutions that are fast, reliable, and built for the future.
+                </p>
+                <p>
+                  Founded on the belief that technology should empower every business, Nexora Studio partners with clients across industries to transform their vision into impactful digital experiences — on time, on budget, and beyond expectations.
                 </p>
               </div>
             </div>

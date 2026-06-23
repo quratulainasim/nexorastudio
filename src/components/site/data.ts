@@ -8,7 +8,7 @@ import blogImg from "@/assets/projects/blog-web.png";
 import hackBookImg from "@/assets/projects/hack1-book.png";
 import hackTodoImg from "@/assets/projects/hack2-todo.png";
 import hack5Img from "@/assets/projects/hack5.png";
-import pharmacyProImg from "@/assets/projects/pharmacypro.png";
+import pharmacyProImg from "@/assets/projects/pharma.png";
 import p1 from "@/assets/Sara Ahmed.webp";
 import p2 from "@/assets/p2.jpg";
 import { Bot, Cloud, Code2, Palette, ScanSearch, Workflow } from "lucide-react";
